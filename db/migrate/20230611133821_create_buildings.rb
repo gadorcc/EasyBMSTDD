@@ -4,7 +4,7 @@ class CreateBuildings < ActiveRecord::Migration[7.0]
       t.string :name
       t.text :address
       t.string :company
-      t.string :type
+      t.string :building_type
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
