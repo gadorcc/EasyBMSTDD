@@ -1,3 +1,8 @@
 <h1>Buildings#index</h1>
-<p>Holab</p>
-<% https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPENWEATHER_API_KEY} %>
+<p>Hola</p>
+<%# <% https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPENWEATHER_API_KEY} %>
+<%= link_to 'Add your building', new_building_path %>
+
+<div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3">
+        <%= render "shared/card" %>
+      </div>

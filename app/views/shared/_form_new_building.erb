@@ -1,0 +1,7 @@
+<%= simple_form_for @building do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :building_type, collection: Building::BTYPE %>
+  <%= f.input :company %>
+  <%= f.submit class: "btn btn-primary mt-4" %>
+<% end %>

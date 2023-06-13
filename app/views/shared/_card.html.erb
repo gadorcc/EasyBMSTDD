@@ -1,0 +1,22 @@
+<% @buildings.each do |building| %>
+<div class="col-md-3">
+  <div class="card">
+    <a href="<%= building_path(building) %>" class="stretched-link"></a>
+    <img src="https://img.freepik.com/free-vector/city-architecture-apartment-building-block-with-tower-skyscraper-linear-sketch-vector-illustration_98292-1035.jpg?w=1380&t=st=1686675423~exp=1686676023~hmac=a13ade36998739492bc4589b75c8bca32b5ea5a2624d61e050723ef37a1e3114" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h5 class="card-title"><%= building.name %></h5>
+      <p class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">
+        <%= building.building_type%>
+      </p>
+      <p class="card-text">
+        <br>
+        <%= building.company %>
+      <div class="row">
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
