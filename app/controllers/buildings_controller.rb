@@ -1,5 +1,5 @@
 class BuildingsController < ApplicationController
-  before_action :set_building, only: [:show, :edit, :update, :destroy]
+  before_action :set_building, only: %i[show edit update destroy]
   def index
     @buildings = Building.all
 
@@ -9,6 +9,10 @@ class BuildingsController < ApplicationController
     #     lng: building.longitude
     #   }
     # end
+
+  end
+
+  def show
 
   end
 
@@ -27,10 +31,6 @@ class BuildingsController < ApplicationController
   end
 
   def edit
-
-  end
-
-  def show
 
   end
 
