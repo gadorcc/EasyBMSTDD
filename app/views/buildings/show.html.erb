@@ -1,10 +1,13 @@
 <h1>hola<h1>
-<%# <% https://api.openweathermap.org/data/2.5/weather?lat={@building.latitude}&lon={@building.longitude}&appid={OPENWEATHER_API_KEY} %>
-<div class="card text-bg-dark">
-  <img src="https://scied.ucar.edu/sites/default/files/media/images/weather_0.jpg" class="card-img" alt="...">
+
+<div class="card text-bg-dark" data-controller="weather" data-action>
+  <%= image_tag "25501.jpg", class:"card-img", alt: "sky background" %>
+  <%# <img src="/app/assets/images/25501.jpg" class="card-img" alt="..."> %>
   <div class="card-img-overlay">
     <h5 class="card-title"><%=@building.latitude %></h5>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    <p><%= @data_weather["weather"][0]["main"] %></p>
+    <p><%= @data_weather["name"] %></p>
   </div>
 </div>
